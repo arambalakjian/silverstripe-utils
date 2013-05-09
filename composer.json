@@ -1,0 +1,16 @@
+{
+	"name": "carboncrayon/silverstripe-utils",
+	"description": "Tools and Helpers for SS sites",
+	"type": "silverstripe-module",
+	"authors": [
+	{
+		"name": "Carbon Crayon",
+		"email": "admin@carboncrayon.com"
+	}
+	],
+	"require":
+	{
+		"silverstripe/framework": ">=3.0.*",
+		"silverstripe/cms": ">=3.0.*"
+	}
+}
