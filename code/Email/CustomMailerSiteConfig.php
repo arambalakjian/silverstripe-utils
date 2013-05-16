@@ -6,7 +6,7 @@ class CustomMailerSiteConfig extends DataExtension {
 		'SendTestEmailsTo' => 'Text'
 	);
 	
-	public function updateCMSFields(FieldList &$fields) {
+	public function updateCMSFields(FieldList $fields) {
 		
 		if(!Director::isLive())
 		{
