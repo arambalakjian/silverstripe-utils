@@ -1,16 +1,12 @@
 <?php
  
-class CustomMailerSiteConfig extends DataObjectDecorator {
+class CustomMailerSiteConfig extends DataExtension {
 	
-	function extraStatics() {
-		return array(
-			'db' => array(
-				'SendTestEmailsTo' => 'Text'
-			)
-		);
-	}
-
-	public function updateCMSFields(FieldSet &$fields) {
+	static $db = array(
+		'SendTestEmailsTo' => 'Text'
+	);
+	
+	public function updateCMSFields(FieldList &$fields) {
 		
 		if(!Director::isLive())
 		{
