@@ -1,6 +1,6 @@
 <?php
  
-class CustomSiteConfig extends DataObjectDecorator {
+class CustomMailerSiteConfig extends DataObjectDecorator {
 	
 	function extraStatics() {
 		return array(
