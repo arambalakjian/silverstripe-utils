@@ -2,7 +2,7 @@
  
 class CustomMailerSiteConfig extends DataExtension {
 	
-	static $db = array(
+	private static $db = array(
 		'SendTestEmailsTo' => 'Text'
 	);
 	
