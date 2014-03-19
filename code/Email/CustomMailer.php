@@ -22,7 +22,7 @@ class CustomMailer extends Mailer
 		{
 			$plainContent = $this->getEmailInfoString($to, $from, $subject, $plainContent, $customheaders);
 			$testTo = ContentController::SiteConfig()->SendTestEmailsTo;
-			return plaintextEmail($testTo, $from, $subject, $plainContent, $attachedFiles, $customheaders);
+			return parent::sendPlain($testTo, $from, $subject, $plainContent, $attachedFiles, $customheaders);
 		}
 		else
 		{
@@ -30,7 +30,7 @@ class CustomMailer extends Mailer
 		}
 		
 	}
-	
+
 	/**
 	 * Send a multi-part HTML email.
 	 * 
@@ -45,11 +45,11 @@ class CustomMailer extends Mailer
 		{
 			$content = $this->getEmailInfoString($to, $from, $subject, $htmlContent, $customheaders);
 			$testTo = ContentController::SiteConfig()->SendTestEmailsTo;
-			return htmlEmail($testTo, $from, $subject, nl2br($content), $attachedFiles, $customheaders, $content, $inlineImages);
+			return parent::sendHTML($testTo, $from, $subject, nl2br($content), $attachedFiles, $customheaders, $content, $inlineImages);
 		}
 		else
 		{
-			return parent::htmlEmail($to, $from, $subject, $htmlContent, $attachedFiles, $customheaders, $plainContent, $inlineImages);
+			return parent::sendHTML($to, $from, $subject, $htmlContent, $attachedFiles, $customheaders, $plainContent, $inlineImages);
 		}
 	}
 
