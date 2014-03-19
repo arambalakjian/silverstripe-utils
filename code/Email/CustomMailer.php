@@ -26,7 +26,7 @@ class CustomMailer extends Mailer
 		}
 		else
 		{
-			return plaintextEmail($to, $from, $subject, $plainContent, $attachedFiles, $customheaders);
+			return parent::sendPlain($to, $from, $subject, $plainContent, $attachedFiles, $customheaders);
 		}
 		
 	}
@@ -49,9 +49,8 @@ class CustomMailer extends Mailer
 		}
 		else
 		{
-			return htmlEmail($to, $from, $subject, $htmlContent, $attachedFiles, $customheaders, $plainContent, $inlineImages);
+			return parent::htmlEmail($to, $from, $subject, $htmlContent, $attachedFiles, $customheaders, $plainContent, $inlineImages);
 		}
-		
 	}
 
 
