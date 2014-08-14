@@ -68,7 +68,7 @@ class CustomMailer extends Mailer
 		$emailString .= "\n*************************************************************";
 		$emailString .= "\n*   TIME: " . date('dS M Y - H:i:s');
 		$emailString .= "\n*************************************************************";
-		$emailString .= "\n" . processHeaders($headers);
+		$emailString .= "\n" . $this->processHeaders($headers);
 		$emailString .= "\n*************************************************************";
 		$emailString .= "\n" . $body;
 		$emailString .= "\n*************************************************************";
